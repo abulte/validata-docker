@@ -6,6 +6,7 @@ Dockerfiles for https://git.opendatafrance.net/validata.
 
 ```
 git clone https://github.com/abulte/validata-docker
+cd validata-docker
 docker-compose up
 ```
 
