@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  api:
+    build: ./api
+    ports:
+      - 5600:5600
+  ui:
+    build: ./ui
+    ports:
+      - 5601:5601
