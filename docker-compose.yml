@@ -2,10 +2,30 @@ version: '3'
 
 services:
   api:
-    build: ./api
+    build:
+      context: ./api
+      # use this to pull validata from your own fork or another branch
+      #args:
+      #  VALIDATA_CORE_REPO: git+https://git.opendatafrance.net/abulte/validata-core.git@dev
+      #  VALIDATA_API_REPO: git+https://git.opendatafrance.net/abulte/validata-api.git@dev
     ports:
       - 5600:5600
+    # use environment and volumes to point to a custom schemas.toml
+    #environment:
+    #  - VALIDATA_SCHEMAS_CONFIG=/schemas/schemas.toml
+    #volumes:
+    #  - /git/schema.data.gouv.fr/:/schemas/
   ui:
-    build: ./ui
+    build:
+      context: ./ui
+      # use this to pull validata from your own fork or another branch
+      #args:
+      #VALIDATA_CORE_REPO: git+https://git.opendatafrance.net/abulte/validata-core.git@dev
+      #VALIDATA_UI_REPO: git+https://git.opendatafrance.net/abulte/validata-ui.git@etalab
     ports:
       - 5601:5601
+    # use environment and volumes to point to a custom schemas.toml
+    #environment:
+    #  - VALIDATA_SCHEMAS_CONFIG=/schemas/schemas.toml
+    #volumes:
+    #  - /git/schema.data.gouv.fr/:/schemas/
