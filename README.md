@@ -18,7 +18,7 @@ This will bring up both `validata-ui` (`http://localhost:5601`) and `validata-ap
 
 ## Build arguments
 
-Arguments are available at build time to customize the pip package/repo used when installing validata components.
+Arguments are available at build time to customize the pip package/repo used when installing validata components. [See a usage example here](https://github.com/abulte/validata-docker/blob/master/docker-compose.dev.yml#L7).
 
 ```
 VALIDATA_CORE_REPO=git+https://git.opendatafrance.net/validata/validata-core.git
