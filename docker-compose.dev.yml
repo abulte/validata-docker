@@ -5,8 +5,8 @@ services:
     build:
       context: ./api
       args:
-        VALIDATA_CORE_REPO: git+https://git.opendatafrance.net/abulte/validata-core.git@dev
-        VALIDATA_API_REPO: git+https://git.opendatafrance.net/abulte/validata-api.git@dev
+        VALIDATA_CORE_REPO: git+https://git.opendatafrance.net/abulte/validata-core.git@etalab
+        VALIDATA_API_REPO: git+https://git.opendatafrance.net/abulte/validata-api.git@etalab
     ports:
       - 5600:5600
     environment:
@@ -20,7 +20,7 @@ services:
     build:
       context: ./ui
       args:
-        VALIDATA_CORE_REPO: git+https://git.opendatafrance.net/abulte/validata-core.git@dev
+        VALIDATA_CORE_REPO: git+https://git.opendatafrance.net/abulte/validata-core.git@etalab
         VALIDATA_UI_REPO: git+https://git.opendatafrance.net/abulte/validata-ui.git@etalab
     ports:
       - 5601:5601
