@@ -10,11 +10,9 @@ services:
       #  VALIDATA_API_REPO: git+https://git.opendatafrance.net/abulte/validata-api.git@dev
     ports:
       - 5600:5600
-    # use environment and volumes to point to a custom schemas.toml
-    #environment:
-    #  - VALIDATA_SCHEMAS_CONFIG=/schemas/schemas.toml
-    #volumes:
-    #  - /git/schema.data.gouv.fr/:/schemas/
+    environment:
+      BADGE_CONFIG_URL: https://git.opendatafrance.net/validata/validata-badge/raw/master/badge_conf.toml
+      SECRET_KEY: dev
   ui:
     build:
       context: ./ui
@@ -24,8 +22,11 @@ services:
       #VALIDATA_UI_REPO: git+https://git.opendatafrance.net/abulte/validata-ui.git@etalab
     ports:
       - 5601:5601
-    # use environment and volumes to point to a custom schemas.toml
-    #environment:
-    #  - VALIDATA_SCHEMAS_CONFIG=/schemas/schemas.toml
-    #volumes:
-    #  - /git/schema.data.gouv.fr/:/schemas/
+    # use environment and volumes to point to a custom homepage_config.json
+    environment:
+      API_VALIDATE_ENDPOINT: http://api:5600/validate
+      HOMEPAGE_CONFIG_FILE: /config/homepage_config.json
+      SECRET_KEY: dev
+      SHIELDS_IO_BASE_URL: https://img.shields.io/
+    volumes:
+     - ./config/:/config/
