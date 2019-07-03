@@ -1,30 +1,9 @@
 {
   "sections": [
     {
-      "name": "my-catalog",
-      "title": "My catalog of schemas",
+      "name": "schema-datagouv-fr",
+      "title": "Schémas de data.gouv.fr",
       "catalog": "https://schema.data.gouv.fr/schemas/schemas.json"
-    },
-    {
-      "name": "external",
-      "title": "External schemas",
-      "description": "A selection of validation tools",
-      "links": [
-        {
-          "name": "inspire",
-          "type": "external",
-          "title": "INSPIRE",
-          "description": "proposé par la Commission Européenne pour tester des ressources géographiques (données, services ou métadonnées)",
-          "website": "http://inspire-sandbox.jrc.ec.europa.eu/validator/"
-        },
-        {
-          "name": "bal",
-          "type": "external",
-          "title": "BAL",
-          "description": "proposé par la mission Etalab pour tester des données Adresse produites localement (format BAL 1.1)",
-          "website": "https://adresse.data.gouv.fr/bases-locales/validateur"
-        }
-      ]
     }
   ]
 }
