@@ -10,7 +10,7 @@ ARG VALIDATA_API_REPO=git+https://git.opendatafrance.net/validata/validata-api.g
 RUN pip install $VALIDATA_CORE_REPO
 RUN pip install $VALIDATA_API_REPO
 
-ENV FLASK_APP=validata_api.app
+ENV FLASK_APP=validata_api
 ENV FLASK_ENV=development
 ENV FLASK_RUN_PORT=5600
 

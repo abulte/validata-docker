@@ -1,0 +1,9 @@
+{
+  "sections": [
+    {
+      "name": "schema-datagouv-fr",
+      "title": "Schémas de data.gouv.fr",
+      "catalog": "https://schema.data.gouv.fr/schemas/schemas.json"
+    }
+  ]
+}
